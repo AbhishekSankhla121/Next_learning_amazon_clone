@@ -5,16 +5,24 @@ import { FaLock } from "react-icons/fa";
 import { useAppSelector } from "@/hooks/redux";
 import { getCart } from "@/redux/cartSlice";
 import OrderSummary from "./OrderSummary";
+import { useRouter } from "next/navigation";
 export default function CheckOut() {
   const cart = useAppSelector(getCart);
   console.log(cart);
+  const Navigation = useRouter();
   return (
     <>
       <div>
         <div className=" border-gray-400 border-b  ">
           <div className="w-[80%] mx-auto flex items-center py-5 justify-between ">
             <div>
-              <Image src={logo} height={150} width={150} alt="logo" />
+              <Image
+                src={logo}
+                height={150}
+                width={150}
+                alt="logo"
+                onClick={() => Navigation.push("/")}
+              />
             </div>
             <div>
               <h1 className="font-bold text-2xl">CheckOut</h1>
