@@ -59,7 +59,7 @@ export default function OrderSummary() {
         description: "Test Transaction",
         image: "https://example.com/your_logo",
         order_id: order.id,
-        callback_url: `/api/paymentverification`,
+        callback_url: "/api/paymentverification",
         prefill: {
           name: "Gaurav Kumar",
           email: "gaurav.kumar@example.com",
