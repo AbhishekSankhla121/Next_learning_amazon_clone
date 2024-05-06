@@ -27,8 +27,9 @@ export default function ProceedToBuy({
               Navigation.push("/checkout");
             }}
             className="bg-[#FFD814] w-full p-2 rounded-md shadow-md my-3"
-            children={"proceed to buy"}
-          />
+          >
+            Procced to buy
+          </button>
         </div>
       </div>
     </>

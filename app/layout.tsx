@@ -1,3 +1,5 @@
+// Import necessary components from Next.js
+import Head from "next/head";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -18,12 +20,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        {/* Add the script with async attribute */}
+        <script
+          async
+          src="https://checkout.razorpay.com/v1/checkout.js"
+        ></script>
+      </Head>
       <body className={inter.className}>
         <ReduxProvider>
           <Header />
           {children}
         </ReduxProvider>
-        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
       </body>
     </html>
   );
